@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Music Player</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="music-player">
+        <h2>🎵 Music Player</h2>
+
+        <!-- Album Cover -->
+        <div class="cover">
+          <img id="cover" src="images/natur.jpg" alt="Album Cover" />
+        </div>
+
+        <!-- Song Info -->
+        <div class="song-info">
+          <h3 id="title">Song Title</h3>
+          <p id="artist">Artist Name</p>
+        </div>
+
+        <!-- Audio -->
+        <audio id="audio"></audio>
+
+        <!-- Progress -->
+        <div class="progress-area">
+          <span id="currentTime">0:00</span>
+
+          <input type="range" id="progress" value="0" min="0" max="100" />
+
+          <span id="duration">0:00</span>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+          <button id="shuffle">
+            <i class="fa-solid fa-shuffle"></i>
+          </button>
+
+          <button id="prev">
+            <i class="fa-solid fa-backward-step"></i>
+          </button>
+
+          <button id="play">
+            <i class="fa-solid fa-play"></i>
+          </button>
+
+          <button id="next">
+            <i class="fa-solid fa-forward-step"></i>
+          </button>
+
+          <button id="repeat">
+            <i class="fa-solid fa-repeat"></i>
+          </button>
+        </div>
+
+        <!-- Volume -->
+        <div class="volume-box">
+          <i class="fa-solid fa-volume-high"></i>
+
+          <input
+            type="range"
+            id="volume"
+            min="0"
+            max="1"
+            step="0.01"
+            value="1"
+          />
+        </div>
+
+        <!-- Playlist -->
+        <div class="playlist">
+          <h3>Playlist</h3>
+
+          <ul id="playlist">
+            <li data-index="0">🎵 Mera Dil Bhi Kitna Pagal Hai</li>
+
+            <li data-index="1">🎵 Sitaare</li>
+
+            <li data-index="2">🎵 Chura Ke Dil Mera</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
